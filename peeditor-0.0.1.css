@@ -1,0 +1,100 @@
+/**************************************************
+*
+*	Import Icon Fonts
+*
+**************************************************/
+@import url('./open-iconic.css');
+
+/**************************************************
+*
+*	PeEditor Styles
+*
+**************************************************/
+.pe-editor{
+	width: 100%;
+	height: auto;
+	border: 1px solid #eee;
+	background-color: #fff;
+	margin: 10px auto;
+	font-family: sans-serif;
+}
+.pe-editor .toolbar{
+	width: 100%;
+	height: 30px;
+	border-bottom: 1px solid #eee;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	padding: 0 3px;
+}
+.pe-editor .toolbar > a{
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	margin: 0 2px;
+	color: #000;
+	text-align: center;
+	border-radius: 5px;
+}
+.pe-editor .toolbar > a > span.small{
+	font-size: 7px;
+}
+.pe-editor .toolbar > a > span{
+	font-size: 10px;
+}
+.pe-editor .textfield{
+	height: calc(100% - 30px);
+	overflow-y: auto;
+	padding: 10px;
+	resize:vertical;
+	min-height: 400px;
+	max-height: 800px;
+}
+.pe-editor .textfield img{
+	max-width: 100%;
+}
+.pe-editor-modal .modal-control{
+	text-align: right;
+}
+.pe-editor-modal .modal-control a{
+	font-size: 12px;
+	color: #000;
+}
+.pe-editor-modal{
+	position: fixed;
+	z-index: 100;
+	width: 500px;
+	height: auto;
+	background-color: #fff;
+	top: 20vh;
+	left: calc(50% - 250px);
+	border: 1px solid #eee;
+	display: none;
+	padding: 10px;
+	box-shadow: 0 0 5px rgba(0,0,0,0.2);
+}
+.pe-editor-modal .button-area{
+	margin: 15px 0;
+	padding-top: 15px;
+	border-top: 1px solid #ccc;
+}
+.pe-editor-modal .button-area .pe-modal-btn{
+	padding: 10px 15px;
+	color: #000;
+	background-color: transparent;
+	border: 1px solid #000;
+	cursor: pointer;
+}
+.pe-editor-modal.active{
+	display: block;
+}
+.pe-editor img.current-thumbnail{
+	width: 100px;
+	height: 100px;
+	margin-left: 10px;
+}
+.pe-editor label.current-thumbnail-wrap{
+	display: flex;
+	align-items: center;
+	margin: 40px 0;
+}

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>PeEditor-0.0.1:ALPHA</title>
+	<link rel="stylesheet" type="text/css" href="peeditor-0.0.1.css">
+	<script src="./peeditor-0.0.1.js"></script>
+	<style>
+		*{
+			box-sizing: border-box;
+		}
+		html,body{
+			font-family: sans-serif;
+			margin: 0;
+			padding: 15px 0 60px;
+		}
+		body{
+			background-color: #fafafa;
+		}
+		.container{
+			width: 100%;
+			max-width: 900px;
+			margin: 0 auto;
+		}
+		h1,h2{
+			margin: 0 0 20px 0;
+			padding: 0 0 20px 0;
+			border-bottom: 1px solid #aaa;
+		}
+		h3{
+			font-size: 16px;
+			margin: 20px 0 0;
+		}
+		h4{
+			font-size: 14px;
+			margin: 0;
+		}
+		h1{
+			font-size: 28px;
+			padding-bottom: 10px;
+		}
+		h2{
+			font-size: 20px;
+		}
+		a{
+			color: #000;
+		}
+		a.btn{
+			background-color: #fff;
+			color: #000;
+			text-decoration: none;
+			border: 1px solid #000;
+			display: inline-block;
+			padding: 10px 30px;
+			font-size: 14px;
+		}
+		ul.usage{
+			margin: 5px 0;
+			padding: 0 0 0 20px;
+			list-style: none;
+		}
+		ul.usage li{
+			line-height: 160%;
+			font-size: 14px;
+			margin-bottom: 15px;
+		}
+		ul.usage code{
+			color: green;
+			font-style: oblique;
+			display: block;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<h1>PeEditor Demo</h1>
+		<div id="pe-editor"></div>
+		<a class="btn" href="javascript:returnValue();">Return body text on console</a>
+	</div>
+	<div class="container" style="margin-top: 60px;">
+		<h2 style="font-size: 20px;">PeEditor Readme</h2>
+		<h3>Initialize</h3>
+		<ul class="usage">
+			<li>
+				<code>new PeEditor("#YOUR_EDITOR_CONTAINER_ID");</code>
+				e.g. var editor = new PeEditor("#your_div_id");
+			</li>
+		</ul>
+		<h3>Methods</h3>
+		<ul class="usage">
+			<li>
+				<code>[INSTANCE_NAME].returnEditorValue();</code>
+				Returning inner HTML codes of instance.
+			</li>
+		</ul>
+		<h3>Download</h3>
+		<ul class="usage">
+			<li>
+				<h4>Version 0.0.1 Alpha</h4>
+				<a href="./PeEditor-0.0.1.alpha.zip">PeEditor-0.0.1.alpha.zip</a>
+			</li>
+		</ul>
+	</div>
+	<script>
+		var editor = new PeEditor("#pe-editor");
+
+		function returnValue(){
+			var val = editor.returnEditorValue();
+			console.log(val);
+		}
+	</script>
+</body>
+</html>
